@@ -8,22 +8,26 @@ This project aims to plan, design, build, and deploy a web application to the AW
 ### Phase 1:
 
 **Task 1:**
-
-In the initial phase, we meticulously planned the architectural design for the infrastructure. Using the Lucid Chart tool, we created a blueprint for each subsequent phase.
+Starting with the first phase, we have planned out architectural design for the infrastructure and for every next phase, we created it using the Lucid Chart tool.
 
 **Task 2:**
-
-Additionally, we estimated the costs of building the web application using the AWS Pricing Calculator. The estimated monthly cost for our infrastructure, comprising Amazon Private Cloud (VPC), Amazon RDS for MySQL, and an Amazon EC2 instance, is 55.70 USD.
+Additionally we estimated the costs that we will spend building the web application using the AWS Pricing Calculator. In the AWS Pricing Calculator we added all the services that we used in our infrastructure which are Amazon Private Cloud (VPC), Amazon RDS for MySQL and the Amazon EC2 instance. At the end our estimated monthly cost is 55.70 USD.
 
 ### Phase 2:
 
 **Task 1:**
+In this phase, we first created an Amazon Virtual Private Cloud (VPC) named "amina-vpc" in the US East (N. Virginia) / us-east-1 region. Our VPC consists of two public subnets and two private subnets. One pair of public and private subnets (public1 and private1) is in the us-east-1a availability zone, while the other pair (public2 and private2) is in the us-east-1b availability zone.
 
-We began by creating an Amazon Virtual Private Cloud (VPC) named "amina-vpc" in the US East (N. Virginia) region. Our VPC comprises two public subnets and two private subnets, each distributed across two availability zones.
+Next, we created an internet gateway and attached it to the VPC to enable communication with the internet. Then we created a Route Table for our VPC. We added routes to this Route Table for the internet gateway and associated the Route Table with our public subnets. To allow the private subnets to access the internet, we created a NAT Gateway in one of the public subnets and added the necessary routes to the Route Table associated with the private subnets.
+
+After successfully creating the Route Tables, we created two Security Groups: one for the EC2 instances and the other for the database. We configured the inbound rules for these Security Groups to allow the necessary inbound traffic. With this setup, we successfully launched our VPC.
 
 **Task 2:**
+In the second task we launched an Amazon EC2 instance. For the amazon machine Image (AMI) we selected Ubuntu, and the instance type is t2.micro. For this instance we selected the VPC and subnets previously created, and attached the security groups from task one. 
 
-Following the VPC setup, we launched an Amazon EC2 instance using Ubuntu as the Amazon Machine Image (AMI) and the t2.micro instance type. The instance was configured with the previously created VPC, subnets, and security groups.
+In order to install the web application and database on our virtual machine, we executed this script:
+![UserdataScript-phase-2.sh](https://drive.google.com/file/d/1R28qCKGkiCOLCJ8ynO6d4FHX9-h7QND_/view?usp=sharing)
+
 
 **Task 3:**
 
