@@ -18,4 +18,5 @@ In helper-scripts folder you can find scripts: <br>
 3. [cloud9-scripts.yml](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/helper-scripts/cloud9-scripts.yml) - for creating a Secrets Manager, Installing the loadtest package, Handles Data Migration into an RDS database.
 
 
-#Students (Group 3): Selma Imširović and Amina Merić
+# Students (Group 3): 
+## Selma Imširović and Amina Merić
