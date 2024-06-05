@@ -7,7 +7,7 @@ As you navigate through this repostiroy in folder [application code](https://git
 
 In docs folder you can find <br>
 1. [Cost Estimates](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/docs/Cost%20Estimate%20-%20Group%203.pdf)
-2. [Project Documentation](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/docs/DevOps%20Project%20Documentation%20-%20Group%203.%20.pdf)
+2. [Project Documentation](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/docs/Documentation.md)
 3. [Phase 2 Diagram](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/docs/phase2_diagram.jpeg)
 4. [Phase 3 Diagram](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/docs/Phase%203%20Diagram.jpg)
 5. [Phase 4/Final Diagram](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/docs/Phase%204%20Diagram.jpg) <br>
