@@ -28,7 +28,7 @@ In the second task we launched an Amazon EC2 instance. For the amazon machine Im
 In order to install the web application and database on our virtual machine, we executed this script:
 
 ![clipboard_image_9315ecfceb817c23](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/assets/116023819/2eb465bd-7033-4e86-8ce2-8c39a3ec06b3)
-(Script can be found in the helper-scripts folder.)
+[Script can be found in the helper-scripts folder.](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/helper-scripts/UserdataScript-phase-2.sh)
 
 After that we launched the instance. 
 **Task 3:**
@@ -61,7 +61,7 @@ In this task we needed to establish the Cloud9 environment in order to run AWS C
 With the fourth task we provisioned AWS Secret Manager. We did that by running this script: 
 ![clipboard_image_27834e1ab6bae19c](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/assets/116023819/1a5edcba-9b47-4dd0-b391-67fb27562be6)
 
-(Script can be found in the helper-scripts folder.)
+[Script can be found in the helper-scripts folder.](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/helper-scripts/cloud9-scripts.yml)
 
 **Task 5:**
 
@@ -69,7 +69,7 @@ In the following we made a new EC2 instance in the same way as the previous one,
 
 ![clipboard_image_82a3d604bdd1075d](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/assets/116023819/04947ac0-a97d-4ea6-9485-00970a58516e)
 
-(Script can be found in the helper-scripts folder.)
+[Script can be found in the helper-scripts folder.](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/helper-scripts/UserdataScript-phase-3.sh)
 
 **Task 6:**
 
@@ -77,7 +77,7 @@ In this task we migrate the database from the original EC2 instance to the new o
 
 ![clipboard_image_36ec69dbdddf5183](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/assets/116023819/3ac6d8eb-46bd-48ae-9c76-479a429203c6)
 
-(Script can be found in the helper-scripts folder.)
+[Script can be found in the helper-scripts folder.](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/helper-scripts/cloud9-scripts.yml)
 
 With this we successfully migrated the database and made sure that everything works properly.
 
@@ -116,7 +116,7 @@ Getting the student’s data:
 At the end we executed the following script on Cloud9 against the load balancer:
 ![clipboard_image_749909ee90f67530](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/assets/116023819/afb9cbc7-f1f7-4da5-a209-b535a0e7a42a)
 
-(Script can be found in the helper-scripts folder.)
+[Script can be found in the helper-scripts folder.](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/helper-scripts/cloud9-scripts.yml)
 
 By this we successfully completed this project that covers various aspects of architecture design, cost estimation, web application deployment, network configuration, security measure setup, high availability and scalability, and access permission management.
 
