@@ -5,7 +5,7 @@
 
 This project aims to plan, design, build, and deploy a web application to the AWS Cloud in line with the best practices of the AWS Well-Architected Framework.
 
-### Phase 1:
+## Phase 1:
 
 **Task 1:**
 Starting with the first phase, we have planned out architectural design for the infrastructure and for every next phase, we created it using the Lucid Chart tool.
@@ -13,7 +13,7 @@ Starting with the first phase, we have planned out architectural design for the 
 **Task 2:**
 Additionally we estimated the costs that we will spend building the web application using the AWS Pricing Calculator. In the AWS Pricing Calculator we added all the services that we used in our infrastructure which are Amazon Private Cloud (VPC), Amazon RDS for MySQL and the Amazon EC2 instance. At the end our estimated monthly cost is 55.70 USD.
 
-### Phase 2:
+## Phase 2:
 
 **Task 1:**
 In this phase, we first created an Amazon Virtual Private Cloud (VPC) named "amina-vpc" in the US East (N. Virginia) / us-east-1 region. Our VPC consists of two public subnets and two private subnets. One pair of public and private subnets (public1 and private1) is in the us-east-1a availability zone, while the other pair (public2 and private2) is in the us-east-1b availability zone.
@@ -31,6 +31,7 @@ In order to install the web application and database on our virtual machine, we 
 [Script can be found in the helper-scripts folder.](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/blob/main/helper-scripts/UserdataScript-phase-2.sh)
 
 After that we launched the instance. 
+
 **Task 3:**
 
 Last task was to actually test this deployment and to ensure that we can successfully access and navigate through it (screenshot can be seen below).
@@ -40,7 +41,7 @@ Last task was to actually test this deployment and to ensure that we can success
 ## Architectural diagram after second phase:
 ![Cloud Architecture](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/assets/116023819/02b98b5b-e5f3-4460-a311-36fda9e2046f)
 
-### Phase 3:
+## Phase 3:
 
 The aim of this phase is to make our application runnable on separate virtual machines.
 
@@ -85,7 +86,7 @@ With this we successfully migrated the database and made sure that everything wo
 
 ![Cloud Architecture (3)](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/assets/116023819/e935354b-5b5a-435f-8564-58ad2f63d926)
 
-### Phase 4:
+## Phase 4:
 
 Phase four was about ensuring the high availability and scalability. Because of that we launched the Application Load Balancer.
 
