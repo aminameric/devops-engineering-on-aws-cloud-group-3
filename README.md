@@ -19,4 +19,4 @@ In helper-scripts folder you can find scripts: <br>
 
 
 # Students (Group 3): 
-## Selma Imširović and Amina Merić
+Selma Imširović and Amina Merić
