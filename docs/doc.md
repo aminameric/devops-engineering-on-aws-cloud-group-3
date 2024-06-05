@@ -1,133 +1,82 @@
 DevOps Engineering on AWS Cloud
+Project: Building a Highly Available, Scalable Web Application
+Group 3: Amina Merić & Selma Imširović
+This project aims to plan, design, build, and deploy a web application to the AWS Cloud in line with the best practices of the AWS Well-Architected Framework.
 
-**Project: Building a Highly Available, Scalable Web Application** Group 3: Amina Merić & Selma Imširović
+Phase 1:
+Task 1:
 
-The goal of this project is to plan, design, build, and deploy a web application to the AWS Cloud in a way that is consistent with best practices of the AWS Well-Architected Framework.
+In the initial phase, we meticulously planned the architectural design for the infrastructure. Using the Lucid Chart tool, we created a blueprint for each subsequent phase.
 
-- *First Phase:*
+Task 2:
 
-**Task 1:**
+Additionally, we estimated the costs of building the web application using the AWS Pricing Calculator. The estimated monthly cost for our infrastructure, comprising Amazon Private Cloud (VPC), Amazon RDS for MySQL, and an Amazon EC2 instance, is 55.70 USD.
 
-Starting with the first phase, we have planned out architectural design for the infrastructure and for every next phase, we created it using the Lucid Chart tool.
+Phase 2:
+Task 1:
 
-**Task 2:**
+We began by creating an Amazon Virtual Private Cloud (VPC) named "amina-vpc" in the US East (N. Virginia) region. Our VPC comprises two public subnets and two private subnets, each distributed across two availability zones.
 
-Additionally we estimated the costs that we will spend building the web application using the AWS Pricing Calculator. In the AWS Pricing Calculator we added all the services that we used in our infrastructure which are Amazon Private Cloud (VPC), Amazon RDS for MySQL and the Amazon EC2 instance. At the end our estimated monthly cost is 55.70 USD.
+Task 2:
 
-- *Second Phase:*
+Following the VPC setup, we launched an Amazon EC2 instance using Ubuntu as the Amazon Machine Image (AMI) and the t2.micro instance type. The instance was configured with the previously created VPC, subnets, and security groups.
 
-**Task 1:**
+Task 3:
 
-In this phase, we first created an Amazon Virtual Private Cloud (VPC) named "amina-vpc" in the US East (N. Virginia) / us-east-1 region. Our VPC consists of two public subnets and two private subnets. One pair of public and private subnets (public1 and private1) is in the us-east-1a availability zone, while the other pair (public2 and private2) is in the us-east-1b availability zone.
+To install the web application and database on our EC2 instance, we executed a script (found in the helper-scripts folder). Subsequently, we successfully launched the instance.
 
-Next, we created an internet gateway and attached it to the VPC to enable communication with the internet. Then we created a Route Table for our VPC. We
+Task 4:
 
-added routes to this Route Table for the internet gateway and associated the Route Table with our public subnets. To allow the private subnets to access the internet, we created a NAT Gateway in one of the public subnets and added the necessary routes to the Route Table associated with the private subnets.
+Finally, we tested the deployment to ensure successful access and navigation through the application.
 
-After successfully creating the Route Tables, we created two Security Groups: one for the EC2 instances and the other for the database. We configured the inbound rules for these Security Groups to allow the necessary inbound traffic. With this setup, we successfully launched our VPC.
+Phase 3:
+Task 1:
 
-**Task 2:**
+We modified the inbound rules in the security group associated with the database (MySQL Aurora) to allow access from the VPC.
 
-In the second task we launched an Amazon EC2 instance. For the amazon machine Image (AMI) we selected Ubuntu, and the instance type is t2.micro. For this instance we selected the VPC and subnets previously created, and attached the security groups from task one.
+Task 2:
 
-In order to install the web application and database on our virtual machine, we executed this script:
+Next, we created an Amazon Relational Database using MySQL engine named “STUDENTS”. The database instance resides in the private subnets within our VPC, ensuring enhanced security.
 
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.001.jpeg)
+Task 3:
 
-(Script can be found in the helper-scripts folder.)
+We established a Cloud9 environment to run AWS Command Line Interface (CLI) commands, ensuring reliable connection and access to the RDS MySQL database.
 
-After that we launched the instance. **Task 3:**
+Task 4:
 
-Last task was to actually test this deployment and to ensure that we can successfully access and navigate through it (screenshot can be seen below).
+Provisioned AWS Secret Manager using a script (found in the helper-scripts folder).
 
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.002.jpeg)
+Task 5:
 
-**Architectural diagram after second phase:**
+Created another EC2 instance similar to the previous one, executing a script for user data (found in the helper-scripts folder).
 
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.003.jpeg)
+Task 6:
 
+Migrated the database from the original EC2 instance to the new one created in Cloud9 using a script (found in the helper-scripts folder).
 
-- *Third phase:*
+Phase 4:
+In this phase, we focused on ensuring high availability and scalability by launching an Application Load Balancer.
 
-The aim of this phase is to make our application runnable on separate virtual machines. **Task 1:**
+Task 1:
 
-In this task we modified the inbound rules in the previously created security group that is associated with the database (MySQL Aurora) in order for the VPC to be able to access the instances of the database.
+We created an Application Load Balancer, configuring its settings and routing.
 
-**Task 2:**
+Task 2:
 
-Second task was about the creation of the Amazon Relational Database using MySQL engine. The database instance is called “STUDENTS” and it resides in the private subnets within our VPC in order to ensure that it is not publicly accessible and to ensure that it is more secure.
+Set up the EC2 instance and auto scaling group, ensuring dynamic scaling and high availability.
 
-**Task 3:**
+Task 3:
 
-In this task we needed to establish the Cloud9 environment in order to run AWS Command Line Interface (CLI) commands. We used the t3.micro EC2 instance which is configured with the SSH - Secure Shell access for secure and reliable connection and also our Cloud 9 environment has access to the RDS MySQL database.
+Tested the application by performing CRUD operations.
 
-**Task 4:**
+Task 4:
 
-With the fourth task we provisioned AWS Secret Manager. We did that by running this script:
+Executed a script against the load balancer on Cloud9.
 
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.004.png)
+By completing this project, we gained practical experience across various aspects, including architecture design, cost estimation, deployment, network configuration, security measures, high availability, scalability, and access management.
 
-(Script can be found in the helper-scripts folder.) **Task 5:**
+Final Architectural Diagram:
 
-In the following we made a new EC2 instance in the same way as the previous one, only for the user data we inserted and executed the following script:
 
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.005.jpeg)
-
-(Script can be found in the helper-scripts folder.) **Task 6:**
-
-In this task we migrated the database from the original EC2 instance to the new one which we created in Cloud9. On the Cloud9 we run the following script:
-
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.006.png)
-
-(Script can be found in the helper-scripts folder.)
-
-With this we successfully migrated the database and made sure that everything works properly.
-
-**Architectural diagram after third phase:**
-
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.007.jpeg)
-
-- *Fourth phase*
-
-Phase four was about ensuring the high availability and scalability. Because of that we launched the Application Load Balancer.
-
-**Task 1:**
-
-We created an Application Load Balancer and configured its name, schema, AZs (two availability zones: *us-east-1a* and *us-east-1b*), security settings and routing.
-
-**Task 2:**
-
-After creating LB, we set up the EC2 instance by creating a Launch Template, selecting the appropriate AMI and instance type, and enabling auto assigned IPv4 addresses for public access. Then we configured the auto scaling group by selecting VPC in subnets and attaching LB.
-
-This setup ensures that our web application is publicly accessible and can dynamically scale to handle different loads, providing high availability and scalability.
-
-**Task 3:**
-
-We tested the application by performing some basic CRUD operations in order to see if everything works correctly and fine.
-
-Adding the student:
-
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.008.jpeg)
-
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.009.jpeg)
-
-Getting the student’s data:
-
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.010.jpeg)
-
-**Task 4:**
-
-At the end we executed the following script on Cloud9 against the load balancer:
-
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.011.png)
-
-(Script can be found in the helper-scripts folder.)
-
-By this we successfully completed this project that covers various aspects of architecture design, cost estimation, web application deployment, network configuration, security measure setup, high availability and scalability, and access permission management.
-
-**Final Architectural diagram:**
-
-![](Aspose.Words.36814d73-4fa7-4ae6-9129-af1f3906b459.012.jpeg)
-
-The goal and sour focus was to obtain a comprehensive understanding and practical experience with AWS services.
+Our primary focus was to achieve a comprehensive understanding and practical experience with AWS services.
 
