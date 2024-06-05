@@ -1,5 +1,5 @@
 # devops-engineering-on-aws-cloud-group-3
-Repository for a DevOps Engineering on AWS cloud course for a Project –  Building a high available, scalable Web Application 
+Repository for a DevOps Engineering on AWS Cloud Course for a Project –  Building a high available, scalable Web Application 
 
 In this repostory you can find application code, helper scripts, diagrams, cost estimates and documentation needed to accomplish project that is on AWS Academy platform: AWS Academy Lab Project - Cloud Web Application Builder [81170]. 
 
