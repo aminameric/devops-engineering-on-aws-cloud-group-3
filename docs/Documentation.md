@@ -128,5 +128,5 @@ By this we successfully completed this project that covers various aspects of ar
 ## Final Architectural Diagram:
 ![Cloud Architecture (2)](https://github.com/aminameric/devops-engineering-on-aws-cloud-group-3/assets/116023819/8b516a98-f9cf-499f-8f3c-3da98115ab51)
 
-The goal and sour focus was to obtain a comprehensive understanding and practical experience with AWS services
+The goal and sour focus was to obtain a comprehensive understanding and practical experience with AWS services.
 
